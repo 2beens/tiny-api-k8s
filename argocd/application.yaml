@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tiny-api
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/2beens/tiny-api-k8s.git
+    targetRevision: HEAD
+    path: kubernetes
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tiny-api
