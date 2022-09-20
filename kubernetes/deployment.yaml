@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tiny-api
-        image: stubin87/tiny-api:v1.0.5
+        image: stubin87/tiny-api:v1.1.0
         ports:
         - containerPort: 9001
         env:
