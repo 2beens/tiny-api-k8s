@@ -6,6 +6,7 @@ metadata:
     app: tiny-api
 spec:
   replicas: 3
+  revisionHistoryLimit: 4
   selector:
     matchLabels:
       app: tiny-api
