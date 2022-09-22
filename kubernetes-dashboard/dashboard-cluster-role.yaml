@@ -1,6 +1,7 @@
+# k8s dash setup: https://github.com/kubernetes/dashboard
 # after kubernetes dashboard has been enabled and "kubernetes proxy" ran, this has to be applied in order
-# to get the necessary permissions for the dashboard:
-# (https://github.com/kubernetes/dashboard/issues/4179#issuecomment-762225102)
+# to get the necessary permissions for the dashboard, more info here:
+# https://github.com/kubernetes/dashboard/issues/4179#issuecomment-762225102
 # not for production :P
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
