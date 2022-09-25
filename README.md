@@ -1,4 +1,4 @@
-# tiny-api-k8s
+# Tiny API with Kubernetes experimentations
 k8s config files for the [tiny-api](https://github.com/2beens/tiny-api) project.
 
 Will be used with k8s 🚢 and argocd setup 🦑.
