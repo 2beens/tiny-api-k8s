@@ -3,7 +3,17 @@ entries:
   tiny-api-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-09-25T12:59:24.8216318+02:00"
+    created: "2022-09-25T15:21:09.63300775+02:00"
+    description: A Helm chart for Kubernetes for tiny-api experimental project
+    digest: 3ff906ee9098c28033e7abcf5f131b63be1f41633dd02568b231bb6b97d2a66e
+    name: tiny-api-chart
+    type: application
+    urls:
+    - https://2beens.github.io/tiny-api-k8s/charts/tiny-api-chart-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-09-25T15:21:09.632841068+02:00"
     description: A Helm chart for Kubernetes for tiny-api experimental project
     digest: 62ed7e48b4b38c64a82fd9a3d9270fda31f6e8febe0a8e94e4a7031f04396cc2
     name: tiny-api-chart
@@ -13,7 +23,7 @@ entries:
     version: 0.9.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-09-25T12:59:24.8216318+02:00"
+    created: "2022-09-25T15:21:09.632664958+02:00"
     description: A Helm chart for Kubernetes for tiny-api experimental project
     digest: 2c669e97f7f81c8e58d7f92532001ceb5102fc1d4c66547c5fb62c78a19d00d0
     name: tiny-api-chart
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://2beens.github.io/tiny-api-k8s/charts/tiny-api-chart-0.9.0.tgz
     version: 0.9.0
-generated: "2022-09-25T12:59:24.8205961+02:00"
+generated: "2022-09-25T15:21:09.631733282+02:00"

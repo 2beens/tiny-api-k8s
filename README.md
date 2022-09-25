@@ -13,8 +13,8 @@ Project structure:
  - `tiny-api-chart` contains helm chart project for tiny-api
     - to update / create new package:
        - 1 - make changes and update the version in `./tiny-api-chart/Chart.yaml`
-       - 2 - `helm package .\tiny-api-chart\`
-       - 3 - move the generated file in the `./charts` folder
+       - 2 - `helm package tiny-api-chart`
+       - 3 - move the generated file in the `./charts` folder (e.g. `mv tiny-api-chart*.tgz charts`)
        - 4 - `helm repo index . --url https://2beens.github.io/tiny-api-k8s/`
        - 5 - push changes
  - `index.yaml` required config for the helm repo that is served via github pages
