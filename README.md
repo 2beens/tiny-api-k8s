@@ -11,6 +11,12 @@ Project structure:
  - `kubernetes-dashboard` contains some config files for k8s dashboard with necessary permissions for dash to be able to have full access to the cluster
  - `charts` contains packaged helm charts
  - `tiny-api-chart` contains helm chart project for tiny-api
+    - to update / create new package:
+       - 1 - make changes and update the version in `./tiny-api-chart/Chart.yaml`
+       - 2 - `helm package .\tiny-api-chart\`
+       - 3 - move the generated file in the `./charts` folder
+       - 4 - `helm repo index . --url https://2beens.github.io/tiny-api-k8s/`
+       - 5 - push changes
  - `index.yaml` required config for the helm repo that is served via github pages
 
 ### TODOs:
