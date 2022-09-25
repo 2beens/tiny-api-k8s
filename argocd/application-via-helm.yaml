@@ -10,7 +10,7 @@ spec:
   source:
     chart: tiny-api-chart
     repoURL: https://2beens.github.io/tiny-api-k8s/
-    targetRevision: 0.9.1
+    targetRevision: 1.0.0
     helm:
       releaseName: tiny-api-chart
   destination:
