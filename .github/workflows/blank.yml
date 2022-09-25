@@ -1,0 +1,41 @@
+name: Release Helm Charts
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    # depending on default permission settings for your org (contents being read-only or read-write for workloads), you will have to add permissions
+    # see: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.9.4
+
+      - name: Release new Chart
+        uses: mikefarah/yq@master
+        run: |
+          # TODO:
+          #   1 create new chart version
+          #   2 update Chart.yaml version
+          #   3 package helm and update index.yaml
+          #   4 update argo cd targetRevision
+          #   5 commit
+          
+          ls -l
