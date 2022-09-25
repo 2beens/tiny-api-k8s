@@ -29,3 +29,5 @@ Project structure:
 ### TODOs 2:
  - add a github action to create a helm package on push to master:
    - https://helm.sh/docs/howto/chart_releaser_action/
+ - create a simple frontend project that connects and uses tiny-api and is deployed in the cluster
+   - use internal service for communication between web client and API 
