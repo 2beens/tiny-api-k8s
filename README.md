@@ -1,7 +1,17 @@
 # tiny-api-k8s
-k8s config files for the tiny-api project
+k8s config files for the [tiny-api](https://github.com/2beens/tiny-api) project.
 
 Will be used with k8s 🚢 and argocd setup 🦑.
+
+Project structure:
+ - `argocd` contains config files for setting up argo cd:
+    - via helm: `kubectl apply -f argocd/application-via-helm.yaml`
+    - via "raw" deployment: `kubectl apply -f argocd/application.yaml`
+ - `kubernetes` contains k8s config files for tiny-api deployment
+ - `kubernetes-dashboard` contains some config files for k8s dashboard with necessary permissions for dash to be able to have full access to the cluster
+ - `charts` contains packaged helm charts
+ - `tiny-api-chart` contains helm chart project for tiny-api
+ - `index.yaml` required config for the helm repo that is served via github pages
 
 ### TODOs:
  1. add and setup this repo 
@@ -13,9 +23,3 @@ Will be used with k8s 🚢 and argocd setup 🦑.
 ### TODOs 2:
  - add a github action to create a helm package on push to master:
    - https://helm.sh/docs/howto/chart_releaser_action/
-
-## Argo CD setup:
-
- 1 - via helm: `kubectl apply -f argocd/application-via-helm.yaml`
- 
- 2 - "raw" deployment: `kubectl apply -f argocd/application.yaml`
