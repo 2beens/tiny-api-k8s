@@ -15,9 +15,9 @@ spec:
       labels:
         app: {{ .Values.appName }}
     spec:
-      imagePullPolicy: {{ .Values.image.pullPolicy }}
       containers:
       - name: {{ .Values.image.name }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         ports:
         - containerPort: {{ .Values.image.containerPort }}

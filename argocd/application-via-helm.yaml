@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tiny-api
+  namespace: argocd
+  labels:
+    name: tiny-api
+spec:
+  project: default
+  source:
+    chart: tiny-api-chart
+    repoURL: https://2beens.github.io/tiny-api-k8s/
+    targetRevision: 0.9.0
+    helm:
+      releaseName: tiny-api-chart
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tiny-api
+  syncPolicy:
+    automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
+      prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
+      selfHeal: true # Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected ( false by default ).
+      allowEmpty: false # Allows deleting all application resources during automatic syncing ( false by default ).
+    syncOptions:     # Sync options which modifies sync behavior
+    - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
