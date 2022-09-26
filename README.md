@@ -30,5 +30,17 @@ Project structure:
 ### TODOs 2:
  - add a github action to create a helm package on push to master:
    - https://helm.sh/docs/howto/chart_releaser_action/
+   - NOT NEEDED, because argocd can read helm chart:
+        ```yaml
+        ...
+         source:
+          repoURL: https://github.com/2beens/tiny-api-k8s.git
+          targetRevision: HEAD
+          path: tiny-api-chart
+          helm:
+            valueFiles:
+              - values.yaml
+         ...
+        ```
  - create a simple frontend project that connects and uses tiny-api and is deployed in the cluster
    - use internal service for communication between web client and API 
