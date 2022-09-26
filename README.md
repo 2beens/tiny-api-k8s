@@ -17,6 +17,7 @@ Project structure:
        - 3 - move the generated file in the `./charts` folder (e.g. `mv tiny-api-chart*.tgz charts`)
        - 4 - `helm repo index . --url https://2beens.github.io/tiny-api-k8s/`
        - 5 - push changes
+    - but, creating a helm package is not necessary, argocd can get the app config from this folder (check argocd/application-via-helm.yaml)
  - `index.yaml` required config for the helm repo that is served via github pages
 
 ### TODOs:
