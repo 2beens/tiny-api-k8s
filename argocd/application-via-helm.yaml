@@ -8,11 +8,12 @@ metadata:
 spec:
   project: default
   source:
-    chart: tiny-api-chart
-    repoURL: https://2beens.github.io/tiny-api-k8s/
-    targetRevision: 1.0.0
+    repoURL: https://github.com/2beens/tiny-api-k8s.git
+    targetRevision: HEAD
+    path: tiny-api-chart
     helm:
-      releaseName: tiny-api-chart
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: tiny-api
