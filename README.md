@@ -28,6 +28,7 @@ Project structure:
     - watch ArgoCD do it's thing 😍
 
 ### TODOs 2:
+ - https://kubernetes.github.io/ingress-nginx/deploy/baremetal/
  - add a github action to create a helm package on push to master:
    - https://helm.sh/docs/howto/chart_releaser_action/
    - NOT NEEDED, because argocd can read helm chart:
