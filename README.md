@@ -43,5 +43,8 @@ Project structure:
               - values.yaml
          ...
         ```
+         🚨 does not work
  - create a simple frontend project that connects and uses tiny-api and is deployed in the cluster
-   - use internal service for communication between web client and API 
+   - use internal service for communication between web client and API
+ - self managed Argo CD:
+    - https://medium.com/devopsturkiye/self-managed-argo-cd-app-of-everything-a226eb100cf0
