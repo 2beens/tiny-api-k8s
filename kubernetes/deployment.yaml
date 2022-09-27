@@ -25,23 +25,23 @@ spec:
         app: tiny-api
     spec:
       containers:
-      - name: tiny-api
-        image: stubin87/tiny-api:v1.1.0
-        ports:
-        - containerPort: 9001
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 9001
-          initialDelaySeconds: 10
-          periodSeconds: 60
-        env:
-        - name: TINY_API_HOST
-          value: "0.0.0.0"
-        - name: TINY_API_INSTANCE_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
+        - name: tiny-api
+          image: stubin87/tiny-api:v1.2.1
+          ports:
+            - containerPort: 9001
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 9001
+            initialDelaySeconds: 10
+            periodSeconds: 60
+          env:
+            - name: TINY_API_HOST
+              value: "0.0.0.0"
+            - name: TINY_API_INSTANCE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
 ---
 # make the tiny api accessible from the outside
 apiVersion: v1
