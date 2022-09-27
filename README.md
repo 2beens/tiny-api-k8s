@@ -20,7 +20,7 @@ Project structure:
     - but, creating a helm package is not necessary, argocd can get the app config from this folder (check argocd/application-via-helm.yaml)
  - `index.yaml` required config for the helm repo that is served via github pages
 
-### TODOs:
+### TODOs (✅ done ✅):
  1. add and setup this repo 
  2. add CI to [tiny-api](https://github.com/2beens/tiny-api) project, to:
     - build and push the docker image with new version/tag on each merge to master
