@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tiny-api-web-client-deployment
+  namespace: tiny-api
+  labels:
+    app: tiny-api-web-client
+spec:
+  replicas: 3
+  revisionHistoryLimit: 4
+  selector:
+    matchLabels:
+      app: tiny-api-web-client
+  template:
+    metadata:
+      namespace: tiny-api
+      labels:
+        app: tiny-api-web-client
+    spec:
+      containers:
+        - name: tiny-api-web-client
+          image: stubin87/tiny-api-web-client:v0.5.1
+          ports:
+            - containerPort: 80
+---
+# make the web client accessible from the outside
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: tiny-api
+  name: tiny-api-web-client-service
+spec:
+  selector:
+    app: tiny-api-web-client
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30001
