@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tiny-api
+  name: tiny-web-client
   namespace: argocd
   labels:
-    name: tiny-api
+    name: tiny-web-client
 spec:
   project: default
   source:
@@ -13,7 +13,7 @@ spec:
     path: kubernetes-tiny-web-client
   destination:
     server: https://kubernetes.default.svc
-    namespace: tiny-api
+    namespace: tiny-web-client
   syncPolicy:
     automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
       prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
