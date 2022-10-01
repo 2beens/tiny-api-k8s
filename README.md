@@ -54,12 +54,16 @@ Project structure:
  - self managed Argo CD:
     - https://medium.com/devopsturkiye/self-managed-argo-cd-app-of-everything-a226eb100cf0
 
-### TODOs 3:
+### TODOs 3 (✅ done ✅):
  - MANAGED K8S 😍😍 with DigitalOcean, 200$ free credit for 60 days <3 
 
-#### K8S with ArgoCD setup in DigitalOcean works like a charm 👌❤️:
+#### K8S with ArgoCD setup in DigitalOcean works like a charm (1st of Oct. 22) 👌❤️:
 
 ![do-argocd-tiny-api](https://user-images.githubusercontent.com/1224689/193412902-0290d57c-2c9c-4a80-9bd4-07f3feb66db1.jpg)
 
 ![do-argocd](https://user-images.githubusercontent.com/1224689/193412960-6cff763d-1723-431e-9fdb-8d1eb579145e.jpg)
+
+### TODOs 4:
+ - experiment with different marketplace apps in DigitalOceal k8s setup
+ - experiment with different Helm packages (prometheus/grafana?)
 
