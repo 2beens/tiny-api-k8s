@@ -32,7 +32,7 @@ Project structure:
     - edit this repo here, to update the config files with new docker image version
     - watch ArgoCD do it's thing 😍
 
-### TODOs 2:
+### TODOs 2 (✅ partially done ⚠️):
  - https://kubernetes.github.io/ingress-nginx/deploy/baremetal/
  - add a github action to create a helm package on push to master:
    - https://helm.sh/docs/howto/chart_releaser_action/
@@ -53,3 +53,6 @@ Project structure:
    - use internal service for communication between web client and API
  - self managed Argo CD:
     - https://medium.com/devopsturkiye/self-managed-argo-cd-app-of-everything-a226eb100cf0
+
+### TODOs 3:
+ - MANAGED K8S 😍😍 with DigitalOcean, 200$ free credit for 60 days <3 
