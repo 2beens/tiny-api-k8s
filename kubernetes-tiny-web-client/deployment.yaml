@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: tiny-web-client
-          image: stubin87/tiny-api-web-client:v0.5.2
+          image: stubin87/tiny-api-web-client:v0.6.0
           ports:
             - containerPort: 80
 ---
