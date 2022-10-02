@@ -22,3 +22,19 @@ spec:
           image: stubin87/tiny-api-web-client:v0.6.0
           ports:
             - containerPort: 80
+---
+# make the web client accessible from the outside
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: tiny-web-client
+  name: tiny-web-client-service
+spec:
+  selector:
+    app: tiny-web-client
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30001
