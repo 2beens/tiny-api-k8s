@@ -17,3 +17,23 @@ spec:
             name: tiny-api-clusterip-service
             port:
               number: 80
+  - host: "tiny.api.lb.2beens.xyz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: tiny-api-clusterip-service
+            port:
+              number: 80
+  - host: "ta.2beens.xyz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: tiny-api-clusterip-service
+            port:
+              number: 80

@@ -17,3 +17,23 @@ spec:
             name: tiny-web-client-clusterip-service
             port:
               number: 80
+  - host: "tiny.wc.2beens.xyz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: tiny-web-client-clusterip-service
+            port:
+              number: 80
+  - host: "www.2beens.xyz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: tiny-web-client-clusterip-service
+            port:
+              number: 80
