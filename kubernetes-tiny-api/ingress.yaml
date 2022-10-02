@@ -4,7 +4,13 @@ metadata:
   name: tiny-api-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-issuer
 spec:
+  tls:
+  - hosts:
+    - tiny.api.lb.serj-tubin.com
+    - tiny.api.lb.2beens.xyz
+    secretName: tiny-api-tls
   rules:
   - host: "tiny.api.lb.serj-tubin.com"
     http:
