@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tiny-api-deployment
+  name: tiny-api-with-lb-svc-deployment
   namespace: tiny-api
   labels:
     app: tiny-api
@@ -35,3 +35,19 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
+---
+# make the tiny api accessible from the outside
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: tiny-api
+  name: tiny-api-with-lb-svc-service
+spec:
+  selector:
+    app: tiny-api
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 9001
+      targetPort: 9001
+      nodePort: 30000

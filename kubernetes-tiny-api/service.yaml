@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tiny-api-clusterip-service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 9001
+  selector:
+    app: tiny-api
