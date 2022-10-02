@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: "tiny-wc.2beens.xyz"
+  - host: "tiny-wc.serj-tubin.com"
     http:
       paths:
       - pathType: Prefix
