@@ -11,8 +11,10 @@ Project structure:
  - `argocd` contains config files for setting up argo cd:
     - via helm: `kubectl apply -f argocd/application-via-helm.yaml`
     - via "raw" deployment: `kubectl apply -f argocd/application.yaml`
- - `kubernetes-tiny-api` contains k8s config files for tiny-api deployment
- - `kubernetes-tiny-web-client` contains k8s config files for tiny-api web client (vue/vuetify web app) deployment
+ - `kubernetes-tiny-api` contains k8s config files for tiny-api deployment (with `ingress`)
+ - `kubernetes-tiny-api-with-lb-svc` contains k8s config files for tiny-api deployment (with service of type LoadBalancer)
+ - `kubernetes-tiny-web-client` contains k8s config files for tiny-api web client (vue/vuetify web app) deployment (with `ingress`)
+ - `kubernetes-tiny-web-client-with-lb-svc` contains k8s config files for tiny-api web client (vue/vuetify web app) deployment (with service of type LoadBalancer)
  - `kubernetes-dashboard` contains some config files for k8s dashboard with necessary permissions for dash to be able to have full access to the cluster
  - `charts` contains packaged helm charts
  - `tiny-api-chart` contains helm chart project for tiny-api
