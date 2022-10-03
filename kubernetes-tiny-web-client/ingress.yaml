@@ -6,6 +6,12 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
+  tls:
+  - hosts:
+    - tiny.wc.serj-tubin.com
+    - tiny.wc.2beens.xyz
+    - www.2beens.xyz
+    secretName: letsencrypt-nginx
   rules:
   - host: "tiny.wc.serj-tubin.com"
     http:
