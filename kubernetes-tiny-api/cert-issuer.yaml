@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: letsencrypt-nginx
-  namespace: backend
+  namespace: tiny-api
 spec:
   # ACME issuer configuration
   # `email` - the email address to be associated with the ACME account
