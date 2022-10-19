@@ -71,8 +71,9 @@ Project structure:
 
 ### TODOs 5:
 Experiment with:
-    - internal (within cluster) communication between different services
-    - DBs in k8s (stateful set, persistent volumes ...)
-    - gRPC (https://grpc.io/docs/languages/go/basics/)
-To achieve that, create another tiny service, which communicates with this one via GRPc. 
-This one will send it some data (via GRPc), which the tiny service will store into DB (basically CRUD operations on some data) 
+
+ - internal (within cluster) communication between different services
+ - DBs in k8s (stateful set, persistent volumes ...)
+ - gRPC (https://grpc.io/docs/languages/go/basics/)
+
+To achieve that, create another tiny service, which communicates with this one via GRPc. This one will send it some data (via GRPc), which the tiny service will store into DB (mongo) (basically CRUD operations on some data). Some data will be simple stock exchange data (stocks and updates of their price).
