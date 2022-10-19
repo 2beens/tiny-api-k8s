@@ -7,7 +7,7 @@ image:
   name: tiny-api
   repository: stubin87/tiny-api
   pullPolicy: IfNotPresent
-  tag: v1.2.1
+  tag: v1.3.0
   containerPort: 9001
   healthPort: 9001
 service:
