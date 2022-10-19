@@ -34,6 +34,11 @@ spec:
                 configMapKeyRef:
                   name: tiny-service-configmap
                   key: serviceHost
+            - name: TINY_SERVICE_MONGO_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: tiny-service-configmap
+                  key: mongoHost
             - name: TINY_SERVICE_INSTANCE_NAME
               valueFrom:
                 fieldRef:
