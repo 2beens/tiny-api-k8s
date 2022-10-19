@@ -4,3 +4,4 @@ metadata:
   name: tiny-api-configmap
 data:
   apihost: "0.0.0.0"
+  tsehost: tiny-service-clusterip-service.tiny-service.svc.cluster.local
