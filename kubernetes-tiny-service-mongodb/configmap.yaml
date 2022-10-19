@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tiny-service-mongodb-configmap
+data:
+  dbUsername: root
+  dbPassword: root
+  databaseUrl: tiny-service-mongodb-service
