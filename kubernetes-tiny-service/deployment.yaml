@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tiny-service-deployment
+  namespace: tiny-service
+  labels:
+    app: tiny-service
+spec:
+  replicas: 2
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: tiny-service
+  template:
+    metadata:
+      namespace: tiny-service
+      labels:
+        app: tiny-service
+    spec:
+      containers:
+        - name: tiny-service
+          image: stubin87/tiny-service:v1.1.1
+          ports:
+            - containerPort: 9002
+          # livenessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 9002
+          #   initialDelaySeconds: 10
+          #   periodSeconds: 60
+          env:
+            - name: TINY_SERVICE_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: tiny-service-configmap
+                  key: serviceHost
+            - name: TINY_SERVICE_INSTANCE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
