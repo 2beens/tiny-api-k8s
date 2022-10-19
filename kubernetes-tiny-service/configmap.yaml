@@ -5,3 +5,4 @@ metadata:
   namespace: tiny-service
 data:
   serviceHost: "0.0.0.0"
+  mongoHost: tiny-service-mongodb-service.tiny-service-mongodb.svc.cluster.local
