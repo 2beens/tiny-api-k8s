@@ -4,4 +4,6 @@ metadata:
   name: tiny-api-configmap
 data:
   apihost: "0.0.0.0"
+  # servicename.namespace.svc.cluster.local
+  # https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
   tsehost: tiny-service-clusterip-service.tiny-service.svc.cluster.local

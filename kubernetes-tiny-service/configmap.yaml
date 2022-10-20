@@ -5,4 +5,6 @@ metadata:
   namespace: tiny-service
 data:
   serviceHost: "0.0.0.0"
+  # servicename.namespace.svc.cluster.local
+  # https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
   mongoHost: tiny-service-mongodb-service.tiny-service-mongodb.svc.cluster.local

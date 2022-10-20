@@ -31,6 +31,7 @@ spec:
               name: tiny-service-mongodb-configmap
               key: dbPassword
 ---
+# TODO: add ingress for mongodb express
 apiVersion: apps/v1
 kind: Deployment
 metadata:
