@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tiny-service-mongodb-deployment
+  namespace: tiny-service-mongodb
+  labels:
+    app: tiny-service-mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tiny-service-mongodb
+  template:
+    metadata:
+      namespace: tiny-service-mongodb
+      labels:
+        app: tiny-service-mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo
+        ports:
+        - containerPort: 27017
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: tiny-service-mongodb-configmap
+              key: dbUsername
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom: 
+            configMapKeyRef:
+              name: tiny-service-mongodb-configmap
+              key: dbPassword

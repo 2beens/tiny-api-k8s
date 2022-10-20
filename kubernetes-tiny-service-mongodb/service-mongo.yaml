@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tiny-service-mongodb-service
+  namespace: tiny-service-mongodb
+spec:
+  selector:
+    app: tiny-service-mongodb
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017
