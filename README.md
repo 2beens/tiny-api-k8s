@@ -1,9 +1,13 @@
 # Tiny API with Kubernetes experimentations
-k8s config files for the [tiny-api](https://github.com/2beens/tiny-api) and [tiny-api-web-client](https://github.com/2beens/tiny-api-web-client) projects.
+k8s config files for the projects:
+ - [tiny-api](https://github.com/2beens/tiny-api)
+ - [tiny-api-web-client](https://github.com/2beens/tiny-api-web-client)
+ - [tiny-service](https://github.com/2beens/tiny-service)
 
 Related docker images:
  - [docker/stubin87/tiny-api](https://hub.docker.com/repository/docker/stubin87/tiny-api)
  - [docker/stubin87/tiny-api-web-client](https://hub.docker.com/repository/docker/stubin87/tiny-api-web-client)
+ - [stubin87/tiny-service](https://hub.docker.com/repository/docker/stubin87/tiny-service)
 
 Will be used with k8s 🚢 and argocd setup 🦑.
 
